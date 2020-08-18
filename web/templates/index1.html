@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -38,7 +37,7 @@
     <div id="container">
 
       <div id="header" >
-        <h1>{{ctx.title}}</h1>
+        <h1 style="margin-top: 270px;">{{ctx.title}}</h1>
       </div>
 
       <div id="menu">
@@ -51,12 +50,6 @@
           <button type=button value="red">red</button>
           <button type=button value="orange">orange</button>
           <button type=button value="yellow">yellow</button>
-<<<<<<< HEAD
-          <button type=button value="green">green</button>
-          <button type=button value="blue">blue</button>
-          <button type=button value="navy">navy</button>
-          <button type=button value="purple">purple</button>
-=======
           <button type=button value="darkyellow">darkyellow</button>
           <button type=button value="green">green</button>
           <button type=button value="darkgreen">darkgreen</button>
@@ -65,30 +58,12 @@
           <button type=button value="purple">purple</button>
           <button type=button value="pink">pink</button>
           <button type=button value="brown">brown</button>
->>>>>>> upstream/master
 
       </div>
       <div id="content">
-        <img id=result width=100%>
+        <img id=main width=100%>
       </div>
     </div>
-      <script>
-          $("#result").attr("src", "/static/img/result.jpg?" + new Date());
 
-          $("button").click( function() {
-              url = "/imageprocess?method=" + $(this).val(); /* 서버쪽에 요청하는 url*/
-
-              $.get(url,
-                    function(data, status) {
-                          $("#result").attr("src","/static/img/result.jpg?"+ new Date());
-                  })
-          });
-
-
-      </script>
   </body>
-<<<<<<< HEAD
 </html>
-=======
-</html>
->>>>>>> upstream/master
