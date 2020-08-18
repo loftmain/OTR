@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}"-->
+    <style>
+    @import url('https://fonts.googleapis.com/css?family=Roboto');
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Roboto", serif;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+      overflow-x: hidden;
+      background-color: white;
+    }
+
+    #header {
+      margin: 2em 0 1.5em 0;
+      text-align: center;
+    }
+
+    #menu {
+      margin: 2em 0 1.5em 0;
+      text-align: center;
+    }
+
+
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <div id="container">
+
+      <div id="header" >
+        <h1>{{ctx.title}}</h1>
+      </div>
+
+      <div id="menu">
+        <form  action="/upload" method="post" enctype="multipart/form-data">
+            <input type="file" name="file1" accept="images/*" capture="camera">
+            <input type="submit" value="전송">
+        </form>
+
+          <button type=button value="original">original</button>
+          <button type=button value="red">red</button>
+          <button type=button value="orange">orange</button>
+          <button type=button value="yellow">yellow</button>
+          <button type=button value="darkyellow">darkyellow</button>
+          <button type=button value="green">green</button>
+          <button type=button value="darkgreen">darkgreen</button>
+          <button type=button value="blue">blue</button>
+          <button type=button value="navy">navy</button>
+          <button type=button value="purple">purple</button>
+          <button type=button value="pink">pink</button>
+          <button type=button value="brown">brown</button>
+
+      </div>
+      <div id="content">
+        <img id=result width=100%>
+      </div>
+    </div>
+      <script>
+          $("#result").attr("src", "/static/img/result.jpg?" + new Date());
+
+          $("button").click( function() {
+              url = "/imageprocess?method=" + $(this).val(); /* 서버쪽에 요청하는 url*/
+
+              $.get(url,
+                    function(data, status) {
+                          $("#result").attr("src","/static/img/result.jpg?"+ new Date());
+                  })
+          });
+
+
+      </script>
+  </body>
+</html>
