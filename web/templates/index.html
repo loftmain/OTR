@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
    <head>
-      <title>Nava</title>
+      <title>{{ctx.title}}</title>
       <meta charset="utf-8">
       <meta name="description" content="Traveling HTML5 Template" />
       <meta name="author" content="Design Hooks" />
@@ -16,17 +16,17 @@
          <div class="container">
             <div class="header-content">
                <a href="index.html">
-                  <img src="../static/img/site-identity.png" alt="site identity" />
+                  <img src="../static/img/mainlogo.png" alt="site identity" width="10%" height="10%"/>
                </a>
 
                <nav class="site-nav">
                   <ul class="clean-list site-links">
                      <li>
-                        <a href="#">Top Destinations</a>
+                        <a href="/about">About</a>
                      </li>
-                     <li>
+                     <!--li>
                         <a href="#">Add your boat</a>
-                     </li>
+                     </li-->
                   </ul>
 
                </nav>
@@ -42,17 +42,39 @@
             <div class="hero-box" style="padding-top: 150px;">
                <div class="container">
                   <div class="hero-text align-center">
-                        <img src="../static/img/mainlogo.png" alt="site identity" width="60%" height="50%"/>
+                     <img src="../static/img/mainlogo.png" alt="site identity" width="60%" height="50%"/>
                      <p>Color detection for the color blindness!</p>
                   </div>
-
-                  <form class="destinations-form">
+                    <form  action="/upload" method="post" enctype="multipart/form-data">
+                        <input type="file" name="file1" accept="images/*" capture="camera">
+                        <input type="submit" value="전송">
+                    </form>
+                  <div id="button">
+                      <button type=button value="original">original</button>
+                      <button type=button value="red">red</button>
+                      <button type=button value="orange">orange</button>
+                      <button type=button value="yellow">yellow</button>
+                      <button type=button value="darkyellow">darkyellow</button>
+                      <button type=button value="green">green</button>
+                      <button type=button value="darkgreen">darkgreen</button>
+                      <button type=button value="blue">blue</button>
+                      <button type=button value="navy">navy</button>
+                      <button type=button value="purple">purple</button>
+                      <button type=button value="pink">pink</button>
+                      <button type=button value="brown">brown</button>
+                  </div>
+                  <div id="content">
+                     <img id=result width=100%>
+                  </div>
+                  <!--form class="destinations-form">
                      <div class="input-line">
                         <input type="file" id="input-file-now" class="file-upload" />
                         <input type="text" name="destination" value="" class="form-input check-value" placeholder="WHAT IS YOUR DESTINATION, SAILOR?" />
                         <button type="button" name="destination-submit" class="form-submit btn btn-special">Find a boat</button>
                      </div>
-                  </form>
+                  </form-->
+
+
                </div>
             </div>
 
@@ -63,5 +85,17 @@
       <!-- Scripts -->
       <script src="../static/js/jquery.js"></script>
       <script src="../static/js/functions.js"></script>
+      <script>
+          $("#result").attr("src", "/static/img/result.jpg?" + new Date());
+
+          $("button").click( function() {
+              url = "/index?method=" + $(this).val(); /* 서버쪽에 요청하는 url*/
+
+              $.get(url,
+                    function(data, status) {
+                          $("#result").attr("src","/static/img/result.jpg?"+ new Date());
+                  })
+          });
+      </script>
    </body>
 </html>

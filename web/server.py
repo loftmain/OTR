@@ -228,7 +228,7 @@ def index():
     else:
         session['counter'] = 1
 
-    return render_template("index.html", ctx={"title":"Over the Rainbow"})
+    return render_template("imageprocessing.html", ctx={"title":"Over the Rainbow"})
 
 
 @app.route('/upload', methods=["POST"]) 
@@ -245,13 +245,16 @@ def upload():
     # return redirect("/")
     return render_template("imageprocessing.html", ctx={"title":"Over the Rainbow"})
 
-@app.route('/imageprocess')
+@app.route('/imageprocessing')
 def imageprocss():
     global image
     
     method = request.args.get("method")
-       
-        
+
+    if method == "original":
+        dst = image
+        cv2.imwrite('./static/img/result.jpg', dst)
+
     if method == "red":
         dst = red(image)
         cv2.imwrite('./static/img/result.jpg', dst)
@@ -275,8 +278,7 @@ def imageprocss():
     if method == "darkgreen":
         dst = darkgreen(image)
         cv2.imwrite('./static/img/result.jpg', dst)        
-        
-    
+
     if method == "blue":
         dst = blue(image)
         cv2.imwrite('./static/img/result.jpg', dst) 
@@ -299,6 +301,11 @@ def imageprocss():
  
            
     return "result"
+
+@app.route('/about')
+def about():
+    return render_template("about.html")
+
 
 
 if __name__ == '__main__':

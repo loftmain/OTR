@@ -8,7 +8,7 @@
     <style>
     @import url('https://fonts.googleapis.com/css?family=Roboto');
     body {
-      margin: 0;
+      margin: 5%;
       padding: 0;
       font-family: "Roboto", serif;
       display: flex;
@@ -29,6 +29,77 @@
       text-align: center;
     }
 
+    #content {
+      margin: 2em 0 1.5em 0;
+      text-align: center;
+    }
+
+     background-color: #ffffff;
+      border-line: #000000 5px;
+      border-radius: 10px;
+      color: #000000;
+      margin: 10px;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;}
+
+    span {
+        background-color: #ffffff;
+        border: #000000 5px;
+        border-radius: 10px;
+        color: #000000;
+        margin: 10px;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    input[type="file"] {
+        display: none;
+    }
+
+    input[type="submit"] {
+      background-color: #ffffff;
+      border-line: #000000 5px;
+      border-radius: 10px;
+      color: #000000;
+      margin: 10px;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;}
+
+    button {
+      background-color: #ffffff;
+      border-line: #000000 5px;
+      border-radius: 10px;
+      color: #000000;
+      margin: 10px;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+    }
+    button:focus {
+      background-color: #000000;
+      border-line: #000000 5px;
+      border-radius: 10px;
+      color: #ffffff;
+      margin: 10px;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+    }
+
 
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -38,45 +109,44 @@
     <div id="container">
 
       <div id="header" >
-        <h1>{{ctx.title}}</h1>
+        <img src="../static/img/mainlogo.png" alt="site identity" width=640px/>
+        <!--h1>{{ctx.title}}</h1-->
       </div>
+        <div id="menu">
+          <form  action="/upload" method="post" enctype="multipart/form-data">
+              <!--input type="file" name="file1" accept="images/*" capture="camera">
+              <input type="submit" value="전송"-->
+                <label class="custom-file-upload">
+                    <input type="file" id="ex_file" name="file1" accept="images/*" capture="camera">
+                    <span>Color Detection For the Color-Blindness</span>
+                    <input type="submit" value="send">
+                </label>
+          </form>
 
-      <div id="menu">
-        <form  action="/upload" method="post" enctype="multipart/form-data">
-            <input type="file" name="file1" accept="images/*" capture="camera">
-            <input type="submit" value="전송">
-        </form>
-
-          <button type=button value="original">original</button>
-          <button type=button value="red">red</button>
-          <button type=button value="orange">orange</button>
-          <button type=button value="yellow">yellow</button>
-<<<<<<< HEAD
-          <button type=button value="green">green</button>
-          <button type=button value="blue">blue</button>
-          <button type=button value="navy">navy</button>
-          <button type=button value="purple">purple</button>
-=======
-          <button type=button value="darkyellow">darkyellow</button>
-          <button type=button value="green">green</button>
-          <button type=button value="darkgreen">darkgreen</button>
-          <button type=button value="blue">blue</button>
-          <button type=button value="navy">navy</button>
-          <button type=button value="purple">purple</button>
-          <button type=button value="pink">pink</button>
-          <button type=button value="brown">brown</button>
->>>>>>> upstream/master
-
-      </div>
+        <br>
+            <button type=button value="original">original</button>
+            <button type=button value="red">red</button>
+            <button type=button value="orange">orange</button>
+            <button type=button value="yellow">yellow</button>
+            <button type=button value="darkyellow">darkyellow</button>
+            <button type=button value="green">green</button>
+            <br>
+            <button type=button value="darkgreen">darkgreen</button>
+            <button type=button value="blue">blue</button>
+            <button type=button value="navy">navy</button>
+            <button type=button value="purple">purple</button>
+            <button type=button value="pink">pink</button>
+            <button type=button value="brown">brown</button>
+        </div>
       <div id="content">
-        <img id=result width=100%>
+          <img id=result width=640px>
       </div>
     </div>
       <script>
           $("#result").attr("src", "/static/img/result.jpg?" + new Date());
 
           $("button").click( function() {
-              url = "/imageprocess?method=" + $(this).val(); /* 서버쪽에 요청하는 url*/
+              url = "/imageprocessing?method=" + $(this).val(); /* 서버쪽에 요청하는 url*/
 
               $.get(url,
                     function(data, status) {
@@ -87,8 +157,4 @@
 
       </script>
   </body>
-<<<<<<< HEAD
 </html>
-=======
-</html>
->>>>>>> upstream/master
