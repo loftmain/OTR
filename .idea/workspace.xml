@@ -20,14 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4522afb7-31b8-450f-89a5-530afb826eb4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/web/templates/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/server.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/static/img/result.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/img/result.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/static/img/subway.png" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/img/subway.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/templates/imageprocessing.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/imageprocessing.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

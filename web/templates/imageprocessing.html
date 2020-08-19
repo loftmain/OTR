@@ -8,7 +8,7 @@
     <style>
     @import url('https://fonts.googleapis.com/css?family=Roboto');
     body {
-      margin: 5%;
+      margin: 0;
       padding: 0;
       font-family: "Roboto", serif;
       display: flex;
@@ -30,6 +30,11 @@
     }
 
     #content {
+      margin: 2em 0 1.5em 0;
+      text-align: center;
+    }
+
+    #footer {
       margin: 2em 0 1.5em 0;
       text-align: center;
     }
@@ -141,6 +146,9 @@
       <div id="content">
           <img id=result width=640px>
       </div>
+        <div id="footer">
+            <p> Copyright(c)2020.Challenger.All rights reserved.</p>
+        </div>
     </div>
       <script>
           $("#result").attr("src", "/static/img/result.jpg?" + new Date());
