@@ -235,15 +235,25 @@ def index():
 def upload():
     global image 
     f = request.files['file1']
-    filename = "./static/img/" + f.filename
-    f.save(filename)
-    image = cv2.imread(filename) 
-    cv2.imwrite("./static/img/result.jpg", image)
-    print(image.shape)
-#     session["image"] = image
+    if f.filename == '':
+        image = cv2.imread('./static/img/non.png')
+        cv2.imwrite("./static/img/result.jpg", image)
+        print(image.shape)
+
+        return render_template("imageprocessing.html", ctx={"title": "Over the Rainbow"})
+
+
+    else:
+        filename = "./static/img/" + f.filename
+
+        f.save(filename)
+        image = cv2.imread(filename)
+        cv2.imwrite("./static/img/result.jpg", image)
+        print(image.shape)
+    #     session["image"] = image
 
     # return redirect("/")
-    return render_template("imageprocessing.html", ctx={"title":"Over the Rainbow"})
+        return render_template("imageprocessing.html", ctx={"title":"Over the Rainbow"})
 
 @app.route('/imageprocessing')
 def imageprocss():
