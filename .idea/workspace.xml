@@ -21,8 +21,13 @@
   <component name="ChangeListManager">
     <list default="true" id="4522afb7-31b8-450f-89a5-530afb826eb4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static/css/sass/core/_forms.sass" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/css/sass/core/_forms.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static/css/screen.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/css/screen.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/static/img/result.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/img/result.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/templates/imageprocessing.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/imageprocessing.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/index1.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/index1.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +59,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/route.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -108,6 +113,7 @@
       <workItem from="1597394123490" duration="11000" />
       <workItem from="1597746686625" duration="236000" />
       <workItem from="1597746925681" duration="6534000" />
+      <workItem from="1597916792846" duration="1262000" />
     </task>
     <servers />
   </component>
@@ -127,30 +133,37 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1597916965088">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1597916965088" />
     <state x="561" y="167" key="FileChooserDialogImpl" timestamp="1597754254967">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="561" y="167" key="FileChooserDialogImpl/0.0.1536.824/-1024.44.1024.728@0.0.1536.824" timestamp="1597394130684" />
     <state x="561" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1597754254967" />
-    <state width="1493" height="115" key="GridCell.Tab.0.bottom" timestamp="1597753342878">
+    <state width="1493" height="115" key="GridCell.Tab.0.bottom" timestamp="1597916951415">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="115" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1597753342878" />
-    <state width="1493" height="115" key="GridCell.Tab.0.center" timestamp="1597753342877">
+    <state width="1493" height="115" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1597916951415" />
+    <state width="1493" height="115" key="GridCell.Tab.0.center" timestamp="1597916951414">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="115" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1597753342877" />
-    <state width="1493" height="115" key="GridCell.Tab.0.left" timestamp="1597753342877">
+    <state width="1493" height="115" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1597916951414" />
+    <state width="1493" height="115" key="GridCell.Tab.0.left" timestamp="1597916951414">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="115" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1597753342877" />
-    <state width="1493" height="115" key="GridCell.Tab.0.right" timestamp="1597753342877">
+    <state width="1493" height="115" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1597916951414" />
+    <state width="1493" height="115" key="GridCell.Tab.0.right" timestamp="1597916951415">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="115" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1597753342877" />
+    <state width="1493" height="115" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1597916951415" />
     <state x="475" y="0" width="585" height="824" key="find.popup" timestamp="1597753482516">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="475" y="0" width="585" height="824" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1597753482516" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/otr$server.coverage" NAME="server Coverage Results" MODIFIED="1597916848557" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/web" />
   </component>
 </project>

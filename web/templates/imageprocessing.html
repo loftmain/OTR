@@ -39,16 +39,16 @@
       text-align: center;
     }
 
-     background-color: #ffffff;
-      border-line: #000000 5px;
-      border-radius: 10px;
-      color: #000000;
-      margin: 10px;
-      padding: 15px 32px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;}
+     /*background-color: #ffffff;*/
+     /* border-line: #000000 5px;*/
+     /* border-radius: 10px;*/
+     /* color: #000000;*/
+     /* margin: 10px;*/
+     /* padding: 15px 32px;*/
+     /* text-align: center;*/
+     /* text-decoration: none;*/
+     /* display: inline-block;*/
+     /* font-size: 16px;}*/
 
     span {
         background-color: #ffffff;
@@ -159,6 +159,15 @@
               $.get(url,
                     function(data, status) {
                           $("#result").attr("src","/static/img/result.jpg?"+ new Date());
+                  })
+          });
+
+          $("img").click( function() {
+              url = "/"; /* 서버쪽에 요청하는 url*/
+
+              $.get(url,
+                    function(data, status) {
+                          window.location = "/";
                   })
           });
 

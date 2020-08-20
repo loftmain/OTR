@@ -2494,6 +2494,18 @@ textarea:focus {
   }
 }
 
+.destinations-form .file-upload {
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+@media (max-width: 768px) {
+  .destinations-form .file-upload {
+    padding: 0 15px !important;
+  }
+}
 /* ----- Subscribe Form ----- */
 .subscribe-form {
   display: block;

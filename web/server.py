@@ -227,8 +227,8 @@ def index():
         session['counter'] += 1
     else:
         session['counter'] = 1
-
-    return render_template("imageprocessing.html", ctx={"title":"Over the Rainbow"})
+    print(session['counter'])
+    return render_template("index.html", ctx={"title":"Over the Rainbow"})
 
 
 @app.route('/upload', methods=["POST"]) 
